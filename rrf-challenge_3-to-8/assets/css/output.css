@@ -9,7 +9,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-black: #000;
     --spacing: 0.25rem;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
@@ -284,6 +283,9 @@
   }
   .flex {
     display: flex;
+  }
+  .table {
+    display: table;
   }
   .h-\[1px\] {
     height: 1px;
@@ -624,8 +626,14 @@
   .min-h-\[201px\] {
     min-height: 201px;
   }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
   .w-3\/12 {
     width: calc(3/12 * 100%);
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
   }
   .w-4\/12 {
     width: calc(4/12 * 100%);
@@ -885,12 +893,18 @@
   .min-w-\[1440px\] {
     min-width: 1440px;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .origin-center {
     transform-origin: center;
   }
   .scale-x-100 {
     --tw-scale-x: 100%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -1114,6 +1128,10 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-r-2 {
     border-right-style: var(--tw-border-style);
     border-right-width: 2px;
@@ -1161,6 +1179,18 @@
     --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
+  .bg-\[url\(\'\.\.\/images\/about-1\.png\'\)\] {
+    background-image: url('../images/about-1.png');
+  }
+  .bg-\[url\(\'\.\.\/images\/projects-my\.png\'\)\] {
+    background-image: url('../images/projects-my.png');
+  }
+  .bg-\[url\(\'\.\.\/images\/testimonial\.png\'\)\] {
+    background-image: url('../images/testimonial.png');
+  }
+  .bg-\[url\(\'\.\.\/images\/welcome\.png\'\)\] {
+    background-image: url('../images/welcome.png');
+  }
   .bg-\[url\(\/assets\/images\/about-1\.png\)\] {
     background-image: url(/assets/images/about-1.png);
   }
@@ -1169,9 +1199,6 @@
   }
   .bg-\[url\(\/assets\/images\/testimonial\.png\)\] {
     background-image: url(/assets/images/testimonial.png);
-  }
-  .bg-\[url\(\/assets\/images\/welcome\.png\)\] {
-    background-image: url(/assets/images/welcome.png);
   }
   .from-\[\#dd3142\] {
     --tw-gradient-from: #dd3142;
@@ -1681,6 +1708,10 @@
   .opacity-\[0\.7\] {
     opacity: 0.7;
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .transition-transform {
     transition-property: transform, translate, scale, rotate;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -1689,6 +1720,10 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .duration-1000 {
+    --tw-duration: 1000ms;
+    transition-duration: 1000ms;
   }
 }
 @property --tw-scale-x {
@@ -1765,6 +1800,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1788,6 +1828,7 @@
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-outline-style: solid;
       --tw-duration: initial;
     }
   }
