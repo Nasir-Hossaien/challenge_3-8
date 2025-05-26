@@ -1,0 +1,24 @@
+.slick-arrow {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    border-radius: 50px;
+    padding-left: 11px;
+    justify-content: center;
+    padding-top: 3px;
+
+}
+
+.slick-arrow.right-arrow {
+    top: 0;
+    right: 0;
+}
+
+.space {
+    position: relative;
+}
+
+
